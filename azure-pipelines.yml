@@ -1,0 +1,14 @@
+resources:
+  repositories:
+    - repository: DevOps
+      type: git
+      ref: 'refs/heads/master'
+      name: "DevOps.Templates"
+
+trigger:
+  branches:
+    include:
+    - master 
+    
+jobs:
+- template: azure-pipelines.yml@DevOps
